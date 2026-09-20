@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profile | HarvestLink</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+        body {
+            font-family: "DM Sans", sans-serif;
+            background-color: #f7f6f0;
+            color: #173b27;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .navbar {
+            background-color: #173b27;
+        }
+
+        .navbar-brand {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .navbar .nav-link {
+            color: white;
+            font-size: 14px;
+        }
+
+        .navbar .nav-link:hover,
+        .navbar .nav-link.active {
+            color: #a8cf63;
+        }
+
+        .page-header {
+            background-color: #173b27;
+            color: white;
+        }
+
+        .card {
+            border-radius: 0;
+            border: 1px solid #dce5d8;
+        }
+
+        .form-control,
+        .form-select {
+            border-radius: 0;
+            border-color: #cbd8c7;
+            padding: 10px 12px;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            border-color: #527d28;
+            box-shadow: 0 0 0 2px rgba(82, 125, 40, 0.12);
+        }
+
+        .form-label {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .profile-box {
+            background-color: #edf4e8;
+        }
+
+        .profile-initial {
+            width: 80px;
+            height: 80px;
+            background-color: #8bc34a;
+            color: #173b27;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Montserrat", sans-serif;
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .btn-main {
+            background-color: #8bc34a;
+            border-color: #8bc34a;
+            color: #173b27;
+            font-weight: 700;
+            border-radius: 0;
+        }
+
+        .btn-main:hover {
+            background-color: #a8cf63;
+            border-color: #a8cf63;
+            color: #173b27;
+        }
+
+        footer {
+            background-color: #102a1c;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="index.html">
+            HARVESTLINK
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="listings.html">
+                        Marketplace
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="create-listing.html">
+                        Create Listing
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="seller.html">
+                        Dashboard
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="orders.html">
+                        Orders
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="profile.html">
+                        Profile
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- PAGE HEADER -->
+<section class="page-header py-5">
+
+    <div class="container">
+
+        <p
+            class="text-uppercase fw-semibold mb-2"
+            style="color:#a8cf63;"
+        >
+            ACCOUNT
+        </p>
+
+        <h1 class="fw-bold mb-2">
+            YOUR PROFILE.
+        </h1>
+
+        <p class="lead text-white-50 mb-0">
+            Manage your personal and farming information.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- PROFILE CONTENT -->
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <!-- PROFILE SUMMARY -->
+            <div class="col-lg-4">
+
+                <div class="card h-100">
+
+                    <div class="card-body p-4">
+
+                        <div class="profile-initial">
+                            RP
+                        </div>
+
+                        <h4 id="profileName">
+                            Rajesh Patil
+                        </h4>
+
+                        <p class="text-muted mb-4">
+                            Farmer
+                        </p>
+
+
+                        <div class="mb-3">
+
+                            <small class="text-muted">
+                                Location
+                            </small>
+
+                            <p class="mb-0">
+                                <span id="profileCity">
+                                    Satara
+                                </span>,
+                                <span id="profileState">
+                                    Maharashtra
+                                </span>
+                            </p>
+
+                        </div>
+
+
+                        <div class="mb-3">
+
+                            <small class="text-muted">
+                                Member Since
+                            </small>
+
+                            <p class="mb-0">
+                                January 2026
+                            </p>
+
+                        </div>
+
+
+                        <div class="mb-4">
+
+                            <small class="text-muted">
+                                Active Listings
+                            </small>
+
+                            <p class="mb-0">
+                                <strong id="profileListings">
+                                    08
+                                </strong>
+                            </p>
+
+                        </div>
+
+
+                        <a
+                            href="seller.html"
+                            class="btn btn-outline-success w-100"
+                        >
+                            BACK TO DASHBOARD
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- EDIT PROFILE -->
+            <div class="col-lg-8">
+
+                <form id="profileForm">
+
+                    <div class="card">
+
+                        <div class="card-header bg-white py-3">
+
+                            <h5 class="mb-0">
+                                Personal Information
+                            </h5>
+
+                        </div>
+
+
+                        <div class="card-body p-4">
+
+                            <div class="row g-3">
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="profileFirstName"
+                                        class="form-label"
+                                    >
+                                        First Name
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="profileFirstName"
+                                        value="Rajesh"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="profileLastName"
+                                        class="form-label"
+                                    >
+                                        Last Name
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="profileLastName"
+                                        value="Patil"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="profileEmail"
+                                        class="form-label"
+                                    >
+                                        Email
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        class="form-control"
+                                        id="profileEmail"
+                                        value="rajesh@example.com"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="profilePhone"
+                                        class="form-label"
+                                    >
+                                        Phone
+                                    </label>
+
+                                    <input
+                                        type="tel"
+                                        class="form-control"
+                                        id="profilePhone"
+                                        value="9876543210"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="profileCityInput"
+                                        class="form-label"
+                                    >
+                                        City
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="profileCityInput"
+                                        value="Satara"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="profileStateInput"
+                                        class="form-label"
+                                    >
+                                        State
+                                    </label>
+
+                                    <select
+                                        class="form-select"
+                                        id="profileStateInput"
+                                        required
+                                    >
+                                        <option selected>
+                                            Maharashtra
+                                        </option>
+
+                                        <option>
+                                            Gujarat
+                                        </option>
+
+                                        <option>
+                                            Karnataka
+                                        </option>
+
+                                        <option>
+                                            Madhya Pradesh
+                                        </option>
+
+                                        <option>
+                                            Rajasthan
+                                        </option>
+
+                                        <option>
+                                            Other
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FARM INFORMATION -->
+                    <div class="card mt-4">
+
+                        <div class="card-header bg-white py-3">
+
+                            <h5 class="mb-0">
+                                Farm Information
+                            </h5>
+
+                        </div>
+
+
+                        <div class="card-body p-4">
+
+                            <div class="row g-3">
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="farmType"
+                                        class="form-label"
+                                    >
+                                        Farm Type
+                                    </label>
+
+                                    <select
+                                        class="form-select"
+                                        id="farmType"
+                                    >
+
+                                        <option selected>
+                                            Mixed Crop Farm
+                                        </option>
+
+                                        <option>
+                                            Vegetable Farm
+                                        </option>
+
+                                        <option>
+                                            Fruit Farm
+                                        </option>
+
+                                        <option>
+                                            Dairy Farm
+                                        </option>
+
+                                        <option>
+                                            Grain Farm
+                                        </option>
+
+                                        <option>
+                                            Other
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="farmSize"
+                                        class="form-label"
+                                    >
+                                        Farm Size
+                                    </label>
+
+                                    <div class="input-group">
+
+                                        <input
+                                            type="number"
+                                            class="form-control"
+                                            id="farmSize"
+                                            value="5"
+                                            min="0"
+                                        >
+
+                                        <span class="input-group-text rounded-0">
+                                            Acres
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="col-12">
+
+                                    <label
+                                        for="aboutFarm"
+                                        class="form-label"
+                                    >
+                                        About Your Farm
+                                    </label>
+
+                                    <textarea
+                                        class="form-control"
+                                        id="aboutFarm"
+                                        rows="4"
+                                        placeholder="Tell buyers a little about your farm."
+                                    >We grow seasonal vegetables and grains using sustainable farming practices.</textarea>
+
+                                </div>
+
+
+                                <div class="col-12">
+
+                                    <label
+                                        for="sellingPreference"
+                                        class="form-label"
+                                    >
+                                        Selling Preference
+                                    </label>
+
+                                    <select
+                                        class="form-select"
+                                        id="sellingPreference"
+                                    >
+
+                                        <option selected>
+                                            Direct to Buyers
+                                        </option>
+
+                                        <option>
+                                            Bulk Orders
+                                        </option>
+
+                                        <option>
+                                            NGOs / Community Organisations
+                                        </option>
+
+                                        <option>
+                                            All Types of Buyers
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SAVE -->
+                    <div
+                        id="profileMessage"
+                        class="mt-3"
+                    ></div>
+
+                    <div class="mt-3">
+
+                        <button
+                            type="submit"
+                            class="btn btn-main px-4 py-2"
+                            id="saveProfile"
+                        >
+                            SAVE CHANGES
+                        </button>
+
+                    </div>
+
+                </form>
+
+
+                <!-- ACCOUNT SECURITY -->
+                <div class="card mt-4">
+
+                    <div class="card-header bg-white py-3">
+
+                        <h5 class="mb-0">
+                            Account Security
+                        </h5>
+
+                    </div>
+
+
+                    <div class="card-body p-4">
+
+                        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+
+                            <div>
+
+                                <h6 class="mb-1">
+                                    Password
+                                </h6>
+
+                                <p class="text-muted small mb-0">
+                                    Change your account password.
+                                </p>
+
+                            </div>
+
+                            <button
+                                type="button"
+                                class="btn btn-outline-success"
+                                id="changePasswordBtn"
+                            >
+                                CHANGE PASSWORD
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="py-4">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-6">
+
+                <h6 class="mb-1">
+                    HARVESTLINK
+                </h6>
+
+                <p class="small text-white-50 mb-0">
+                    Connecting farmers, buyers and communities.
+                </p>
+
+            </div>
+
+            <div class="col-md-6 text-md-end mt-3 mt-md-0">
+
+                <a
+                    href="listings.html"
+                    class="text-decoration-none"
+                    style="color:#a8cf63;"
+                >
+                    Marketplace
+                </a>
+
+                <span class="text-white-50 mx-2">|</span>
+
+                <a
+                    href="impact.html"
+                    class="text-decoration-none"
+                    style="color:#a8cf63;"
+                >
+                    Our Impact
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- BOOTSTRAP + PROJECT JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Listing | HarvestLink</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: #f7f6f0;
+            color: #173b27;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .navbar {
+            background: #173b27;
+        }
+
+        .navbar-brand {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .navbar .nav-link {
+            color: #ffffff;
+            font-size: 14px;
+        }
+
+        .navbar .nav-link:hover,
+        .navbar .nav-link.active {
+            color: #a8cf63;
+        }
+
+        .page-header {
+            background: #173b27;
+            color: white;
+            padding: 55px 0;
+        }
+
+        .page-header h1 {
+            font-size: clamp(32px, 5vw, 55px);
+            font-weight: 800;
+        }
+
+        .form-section {
+            background: white;
+            border: 1px solid #dce5d8;
+            padding: 30px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #dce5d8;
+        }
+
+        .form-label {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .form-control,
+        .form-select {
+            border: 1px solid #cbd8c7;
+            border-radius: 0;
+            padding: 11px 12px;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            border-color: #527d28;
+            box-shadow: 0 0 0 2px rgba(82, 125, 40, 0.12);
+        }
+
+        .btn-main {
+            background: #8bc34a;
+            border: 1px solid #8bc34a;
+            color: #173b27;
+            font-weight: 700;
+            border-radius: 0;
+            padding: 12px 24px;
+        }
+
+        .btn-main:hover {
+            background: #a8cf63;
+            border-color: #a8cf63;
+            color: #173b27;
+        }
+
+        .btn-outline-main {
+            border: 1px solid #173b27;
+            color: #173b27;
+            font-weight: 600;
+            border-radius: 0;
+            padding: 12px 24px;
+        }
+
+        .btn-outline-main:hover {
+            background: #173b27;
+            color: white;
+        }
+
+        .info-box {
+            background: #edf4e8;
+            border-left: 4px solid #8bc34a;
+            padding: 18px;
+        }
+
+        .info-box h6 {
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .upload-box {
+            border: 1px dashed #aebfab;
+            padding: 25px;
+            background: #fafcf8;
+        }
+
+        footer {
+            background: #102a1c;
+            color: white;
+            padding: 35px 0;
+        }
+
+        footer a {
+            color: #a8cf63;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+
+        <a class="navbar-brand" href="index.html">
+            HARVESTLINK
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="listings.html">Marketplace</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="create-listing.html">
+                        Create Listing
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="seller.html">Dashboard</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="orders.html">Orders</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.html">Profile</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-8">
+
+                <p class="text-uppercase fw-semibold mb-2"
+                   style="color:#a8cf63;">
+                    FOR FARMERS
+                </p>
+
+                <h1>LIST YOUR HARVEST.</h1>
+
+                <p class="lead mt-3 mb-0">
+                    Add your fresh produce to the HarvestLink marketplace
+                    and connect directly with buyers.
+                </p>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- MAIN FORM -->
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <!-- FORM -->
+            <div class="col-lg-8">
+
+                <form id="createListingForm">
+
+                    <!-- PRODUCT INFORMATION -->
+                    <div class="form-section mb-4">
+
+                        <div class="section-title">
+                            Product Information
+                        </div>
+
+                        <div class="row g-3">
+
+                            <div class="col-md-8">
+                                <label for="productName" class="form-label">
+                                    Product Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="productName"
+                                    placeholder="e.g. Fresh Tomatoes"
+                                    required
+                                >
+                            </div>
+
+                            <div class="col-md-4">
+                                <label for="productCategory" class="form-label">
+                                    Category
+                                </label>
+
+                                <select
+                                    class="form-select"
+                                    id="productCategory"
+                                    required
+                                >
+                                    <option value="">Select category</option>
+                                    <option value="vegetables">Vegetables</option>
+                                    <option value="fruits">Fruits</option>
+                                    <option value="grains">Grains</option>
+                                    <option value="dairy">Dairy</option>
+                                    <option value="organic">Organic</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="productQuantity" class="form-label">
+                                    Available Quantity
+                                </label>
+
+                                <input
+                                    type="number"
+                                    class="form-control"
+                                    id="productQuantity"
+                                    min="1"
+                                    placeholder="e.g. 100"
+                                    required
+                                >
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="productUnit" class="form-label">
+                                    Unit
+                                </label>
+
+                                <select
+                                    class="form-select"
+                                    id="productUnit"
+                                    required
+                                >
+                                    <option value="">Select unit</option>
+                                    <option value="kg">Kilogram (kg)</option>
+                                    <option value="quintal">Quintal</option>
+                                    <option value="ton">Ton</option>
+                                    <option value="litre">Litre</option>
+                                    <option value="dozen">Dozen</option>
+                                    <option value="piece">Piece</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="productPrice" class="form-label">
+                                    Price per Unit
+                                </label>
+
+                                <div class="input-group">
+                                    <span class="input-group-text rounded-0">
+                                        ₹
+                                    </span>
+
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="productPrice"
+                                        min="1"
+                                        placeholder="e.g. 40"
+                                        required
+                                    >
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="harvestDate" class="form-label">
+                                    Harvest Date
+                                </label>
+
+                                <input
+                                    type="date"
+                                    class="form-control"
+                                    id="harvestDate"
+                                    required
+                                >
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="productLocation" class="form-label">
+                                    Location
+                                </label>
+
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="productLocation"
+                                    placeholder="e.g. Satara, Maharashtra"
+                                    required
+                                >
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="productionType" class="form-label">
+                                    Production Type
+                                </label>
+
+                                <select
+                                    class="form-select"
+                                    id="productionType"
+                                    required
+                                >
+                                    <option value="">Select type</option>
+                                    <option value="conventional">Conventional</option>
+                                    <option value="organic">Organic</option>
+                                    <option value="natural">Natural Farming</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PRODUCT IMAGE -->
+                    <div class="form-section mb-4">
+
+                        <div class="section-title">
+                            Product Image
+                        </div>
+
+                        <div class="upload-box">
+
+                            <label for="productImage" class="form-label">
+                                Upload an image
+                            </label>
+
+                            <input
+                                type="file"
+                                class="form-control mt-2"
+                                id="productImage"
+                                accept="image/*"
+                            >
+
+                            <small class="text-muted d-block mt-2">
+                                Add a clear image of your produce.
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- DESCRIPTION -->
+                    <div class="form-section mb-4">
+
+                        <div class="section-title">
+                            Description
+                        </div>
+
+                        <label for="productDescription" class="form-label">
+                            Tell buyers about your produce
+                        </label>
+
+                        <textarea
+                            class="form-control"
+                            id="productDescription"
+                            rows="5"
+                            placeholder="Mention quality, freshness, farming method, packaging, or any other useful details."
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- FULFILMENT -->
+                    <div class="form-section mb-4">
+
+                        <div class="section-title">
+                            Fulfilment & Availability
+                        </div>
+
+                        <div class="row g-3">
+
+                            <div class="col-md-6">
+
+                                <label for="fulfilmentMethod" class="form-label">
+                                    Fulfilment Method
+                                </label>
+
+                                <select
+                                    class="form-select"
+                                    id="fulfilmentMethod"
+                                    required
+                                >
+                                    <option value="">Select method</option>
+                                    <option value="pickup">
+                                        Buyer Pickup
+                                    </option>
+                                    <option value="delivery">
+                                        Farmer Delivery
+                                    </option>
+                                    <option value="both">
+                                        Pickup / Delivery
+                                    </option>
+                                </select>
+
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <label for="availableFrom" class="form-label">
+                                    Available From
+                                </label>
+
+                                <input
+                                    type="date"
+                                    class="form-control"
+                                    id="availableFrom"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CONTACT -->
+                    <div class="form-section mb-4">
+
+                        <div class="section-title">
+                            Contact Information
+                        </div>
+
+                        <div class="row g-3">
+
+                            <div class="col-md-6">
+
+                                <label for="contactName" class="form-label">
+                                    Contact Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="contactName"
+                                    placeholder="Your name"
+                                    required
+                                >
+
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <label for="contactPhone" class="form-label">
+                                    Contact Phone
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    class="form-control"
+                                    id="contactPhone"
+                                    placeholder="10-digit mobile number"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- MESSAGE -->
+                    <div id="listingMessage" class="mb-3"></div>
+
+
+                    <!-- BUTTONS -->
+                    <div class="d-flex flex-wrap gap-2">
+
+                        <button
+                            type="button"
+                            class="btn btn-outline-main"
+                            id="saveDraft"
+                        >
+                            SAVE DRAFT
+                        </button>
+
+                        <button
+                            type="submit"
+                            class="btn btn-main"
+                            id="publishListing"
+                        >
+                            PUBLISH LISTING
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <!-- SIDE INFORMATION -->
+            <div class="col-lg-4">
+
+                <div class="info-box mb-4">
+
+                    <h6>Before you publish</h6>
+
+                    <p class="mb-0 small">
+                        Make sure your product name, quantity, price,
+                        location and availability details are correct.
+                    </p>
+
+                </div>
+
+
+                <div class="form-section">
+
+                    <h5 class="mb-3">
+                        How listing works
+                    </h5>
+
+                    <div class="mb-4">
+
+                        <strong>01. Add your produce</strong>
+
+                        <p class="small text-muted mt-1 mb-0">
+                            Enter basic information about what you are selling.
+                        </p>
+
+                    </div>
+
+                    <div class="mb-4">
+
+                        <strong>02. Publish</strong>
+
+                        <p class="small text-muted mt-1 mb-0">
+                            Your listing becomes visible on the marketplace.
+                        </p>
+
+                    </div>
+
+                    <div>
+
+                        <strong>03. Receive orders</strong>
+
+                        <p class="small text-muted mt-1 mb-0">
+                            Buyers can view your produce and place orders.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="mt-4">
+
+                    <a
+                        href="seller.html"
+                        class="btn btn-outline-main w-100"
+                    >
+                        GO TO SELLER DASHBOARD
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-md-6">
+
+                <h5>HARVESTLINK</h5>
+
+                <p class="mb-0 text-white-50">
+                    Connecting farmers, buyers and communities
+                    through a simple local marketplace.
+                </p>
+
+            </div>
+
+            <div class="col-md-6 text-md-end">
+
+                <a href="listings.html">Marketplace</a>
+                <span class="text-white-50 mx-2">|</span>
+
+                <a href="impact.html">Our Impact</a>
+                <span class="text-white-50 mx-2">|</span>
+
+                <a href="index.html">Home</a>
+
+            </div>
+
+        </div>
+
+        <hr class="border-secondary my-4">
+
+        <p class="small text-white-50 mb-0">
+            © 2026 HarvestLink. Academic Project.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- BOOTSTRAP + PROJECT JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

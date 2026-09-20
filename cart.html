@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Cart | HarvestLink</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: #f7f8f4;
+            color: #172b1c;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .navbar {
+            background: #123d25;
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: white !important;
+        }
+
+        .nav-link:hover {
+            color: #b9d9b8 !important;
+        }
+
+        .page-header {
+            background: white;
+            border-bottom: 1px solid #dfe5dc;
+        }
+
+        .cart-card {
+            background: white;
+            border: 1px solid #dfe5dc;
+        }
+
+        .cart-image {
+            width: 90px;
+            height: 75px;
+            object-fit: cover;
+        }
+
+        .summary-box {
+            background: #123d25;
+            color: white;
+        }
+
+        .summary-line {
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .btn-success {
+            background: #26733d;
+            border-color: #26733d;
+        }
+
+        .btn-success:hover {
+            background: #1d5c30;
+            border-color: #1d5c30;
+        }
+
+        .empty-cart {
+            padding: 70px 20px;
+        }
+
+        footer {
+            background: #123d25;
+            color: white;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg">
+
+    <div class="container">
+
+        <a
+            class="navbar-brand fw-bold"
+            href="index.html"
+        >
+            HARVESTLINK
+        </a>
+
+
+        <button
+            class="navbar-toggler bg-light"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+        >
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div
+            class="collapse navbar-collapse"
+            id="mainNavbar"
+        >
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="index.html"
+                    >
+                        Home
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="listings.html"
+                    >
+                        Marketplace
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link active"
+                        href="cart.html"
+                    >
+                        My Cart
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="orders.html"
+                    >
+                        My Orders
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="profile.html"
+                    >
+                        Profile
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="login.html"
+                    >
+                        Login
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- PAGE HEADER -->
+
+<section class="page-header py-5">
+
+    <div class="container">
+
+        <p class="text-success fw-semibold mb-2">
+            YOUR SELECTION
+        </p>
+
+        <h1 class="fw-bold mb-2">
+            MY CART.
+        </h1>
+
+        <p class="text-secondary mb-0">
+            Review your selected produce before placing your order.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- CART SECTION -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+
+            <!-- CART ITEMS -->
+
+            <div class="col-lg-8">
+
+                <div class="cart-card">
+
+                    <div class="p-4 border-bottom">
+
+                        <div class="d-flex justify-content-between align-items-center">
+
+                            <h4 class="fw-bold mb-0">
+                                Selected Produce
+                            </h4>
+
+                            <span
+                                id="cartItemCount"
+                                class="text-secondary"
+                            >
+                                0 items
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div id="cartItems">
+
+                        <!-- Cart items will be added by JavaScript -->
+
+                    </div>
+
+
+                    <!-- EMPTY CART -->
+
+                    <div
+                        id="emptyCart"
+                        class="empty-cart text-center d-none"
+                    >
+
+                        <h4 class="fw-bold mb-3">
+                            Your cart is empty
+                        </h4>
+
+                        <p class="text-secondary mb-4">
+                            Browse the marketplace and add fresh produce to your cart.
+                        </p>
+
+                        <a
+                            href="listings.html"
+                            class="btn btn-success px-4 py-2"
+                        >
+                            Browse Marketplace
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ORDER SUMMARY -->
+
+            <div class="col-lg-4">
+
+                <div class="summary-box p-4">
+
+                    <h4 class="fw-bold mb-4">
+                        ORDER SUMMARY
+                    </h4>
+
+
+                    <div class="d-flex justify-content-between summary-line pb-3 mb-3">
+
+                        <span>
+                            Items
+                        </span>
+
+                        <span id="summaryItems">
+                            0
+                        </span>
+
+                    </div>
+
+
+                    <div class="d-flex justify-content-between summary-line pb-3 mb-3">
+
+                        <span>
+                            Subtotal
+                        </span>
+
+                        <span id="cartSubtotal">
+                            ₹0
+                        </span>
+
+                    </div>
+
+
+                    <div class="d-flex justify-content-between summary-line pb-3 mb-3">
+
+                        <span>
+                            Delivery
+                        </span>
+
+                        <span id="deliveryCharge">
+                            ₹50
+                        </span>
+
+                    </div>
+
+
+                    <div class="d-flex justify-content-between mb-4">
+
+                        <strong>
+                            TOTAL
+                        </strong>
+
+                        <strong
+                            id="cartTotal"
+                            class="fs-4"
+                        >
+                            ₹0
+                        </strong>
+
+                    </div>
+
+
+                    <button
+                        id="placeOrderBtn"
+                        type="button"
+                        class="btn btn-light w-100 py-3 fw-semibold"
+                    >
+                        PLACE ORDER
+                    </button>
+
+
+                    <div
+                        id="cartMessage"
+                        class="mt-3"
+                    ></div>
+
+                </div>
+
+
+                <a
+                    href="listings.html"
+                    class="btn btn-outline-success w-100 mt-3"
+                >
+                    Continue Shopping
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer class="py-4">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-6">
+
+                <h5 class="fw-bold">
+                    HARVESTLINK
+                </h5>
+
+                <p class="mb-0">
+                    Connecting farmers, buyers and communities.
+                </p>
+
+            </div>
+
+
+            <div class="col-md-6 text-md-end mt-3 mt-md-0">
+
+                <p class="mb-0">
+                    © 2026 HarvestLink
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="app.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product | HarvestLink</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: #f7f8f4;
+            color: #172b1c;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .navbar {
+            background: #123d25;
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: white !important;
+        }
+
+        .nav-link:hover {
+            color: #b9d9b8 !important;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 480px;
+            object-fit: cover;
+        }
+
+        .product-card {
+            background: white;
+            border: 1px solid #dfe5dc;
+        }
+
+        .price {
+            color: #26733d;
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .info-box {
+            background: #f1f5ef;
+            border: 1px solid #dce5d9;
+        }
+
+        footer {
+            background: #123d25;
+            color: white;
+        }
+
+        .breadcrumb a {
+            color: #26733d;
+            text-decoration: none;
+        }
+
+        .btn-success {
+            background: #26733d;
+            border-color: #26733d;
+        }
+
+        .btn-success:hover {
+            background: #1d5c30;
+            border-color: #1d5c30;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="index.html">
+            HARVESTLINK
+        </a>
+
+        <button
+            class="navbar-toggler bg-light"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="listings.html">Marketplace</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="impact.html">Our Impact</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="ngo.html">NGOs</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="seller.html">For Farmers</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- HEADER -->
+<section class="py-5 bg-white border-bottom">
+    <div class="container">
+
+        <div class="mb-3">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+
+                    <li class="breadcrumb-item">
+                        <a href="listings.html">Marketplace</a>
+                    </li>
+
+                    <li
+                        class="breadcrumb-item active"
+                        id="breadcrumbProduct"
+                    >
+                        Fresh Tomatoes
+                    </li>
+
+                </ol>
+            </nav>
+        </div>
+
+        <h1
+            class="fw-bold mb-0"
+            id="pageProductTitle"
+        >
+            FRESH TOMATOES
+        </h1>
+
+    </div>
+</section>
+
+
+<!-- PRODUCT -->
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <!-- IMAGE -->
+            <div class="col-lg-7">
+
+                <div class="product-card">
+                    <img
+                        id="productImage"
+                        class="product-image"
+                        src="https://images.unsplash.com/photo-1546094096-0df4bcaaa337?auto=format&fit=crop&w=1000&q=80"
+                        alt="Fresh Tomatoes"
+                    >
+                </div>
+
+            </div>
+
+
+            <!-- DETAILS -->
+            <div class="col-lg-5">
+
+                <div class="product-card p-4 h-100">
+
+                    <span
+                        id="productCategory"
+                        class="badge bg-success mb-3"
+                    >
+                        Vegetables
+                    </span>
+
+                    <h2
+                        id="productName"
+                        class="fw-bold mb-3"
+                    >
+                        Fresh Tomatoes
+                    </h2>
+
+                    <p
+                        id="productDescription"
+                        class="text-secondary mb-4"
+                    >
+                        Freshly harvested tomatoes available directly from the farm.
+                    </p>
+
+
+                    <div class="price mb-4" id="productPrice">
+                        ₹32/kg
+                    </div>
+
+
+                    <div class="info-box p-3 mb-4">
+
+                        <div class="row g-3">
+
+                            <div class="col-6">
+
+                                <small class="text-secondary">
+                                    Available Quantity
+                                </small>
+
+                                <div
+                                    class="fw-bold"
+                                    id="productQuantity"
+                                >
+                                    50 kg
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-6">
+
+                                <small class="text-secondary">
+                                    Location
+                                </small>
+
+                                <div
+                                    class="fw-bold"
+                                    id="productLocation"
+                                >
+                                    Satara
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-12">
+
+                                <small class="text-secondary">
+                                    Seller
+                                </small>
+
+                                <div
+                                    class="fw-bold"
+                                    id="productSeller"
+                                >
+                                    Rajesh Patil
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ORDER -->
+                    <div class="mb-3">
+
+                        <label
+                            for="orderQuantity"
+                            class="form-label fw-semibold"
+                        >
+                            Quantity Required
+                        </label>
+
+                        <input
+                            type="number"
+                            id="orderQuantity"
+                            class="form-control"
+                            value="1"
+                            min="1"
+                        >
+
+                    </div>
+
+
+<button
+    type="button"
+    id="addToCart"
+    class="btn btn-success w-100 py-3"
+>
+    Add to Cart
+</button>
+
+<div id="cartMessage"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PRODUCT INFORMATION -->
+<section class="pb-5">
+
+    <div class="container">
+
+        <div class="accordion" id="productAccordion">
+
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button
+                        class="accordion-button fw-semibold"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#productDetails"
+                    >
+                        Product Details
+                    </button>
+
+                </h2>
+
+                <div
+                    id="productDetails"
+                    class="accordion-collapse collapse show"
+                >
+
+                    <div class="accordion-body">
+
+                        HarvestLink connects buyers directly with farmers
+                        so that fresh agricultural produce can be discovered
+                        and ordered through the platform.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button
+                        class="accordion-button collapsed fw-semibold"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#deliveryInfo"
+                    >
+                        Delivery Information
+                    </button>
+
+                </h2>
+
+                <div
+                    id="deliveryInfo"
+                    class="accordion-collapse collapse"
+                >
+
+                    <div class="accordion-body">
+
+                        Delivery and fulfilment details are coordinated
+                        between the buyer and seller based on availability
+                        and location.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- RELATED LISTINGS -->
+<section class="py-5 bg-white">
+
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+
+            <div>
+
+                <p class="text-success fw-semibold mb-1">
+                    MORE PRODUCE
+                </p>
+
+                <h2 class="fw-bold mb-0">
+                    RELATED LISTINGS
+                </h2>
+
+            </div>
+
+            <a
+                href="listings.html"
+                class="btn btn-outline-success"
+            >
+                View All
+            </a>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <div class="card h-100">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1553279768-865429fa0078?auto=format&fit=crop&w=800&q=80"
+                        class="card-img-top"
+                        style="height:220px; object-fit:cover;"
+                        alt="Alphonso Mangoes"
+                    >
+
+                    <div class="card-body">
+
+                        <h5 class="fw-bold">
+                            Alphonso Mangoes
+                        </h5>
+
+                        <p class="text-secondary">
+                            Ratnagiri
+                        </p>
+
+                        <a
+                            href="product.html?id=2"
+                            class="btn btn-outline-success"
+                        >
+                            View
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card h-100">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80"
+                        class="card-img-top"
+                        style="height:220px; object-fit:cover;"
+                        alt="Organic Wheat"
+                    >
+
+                    <div class="card-body">
+
+                        <h5 class="fw-bold">
+                            Organic Wheat
+                        </h5>
+
+                        <p class="text-secondary">
+                            Nashik
+                        </p>
+
+                        <a
+                            href="product.html?id=3"
+                            class="btn btn-outline-success"
+                        >
+                            View
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card h-100">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1683355739329-cea18ba93f02?auto=format&fit=crop&w=800&q=80"
+                        class="card-img-top"
+                        style="height:220px; object-fit:cover;"
+                        alt="Red Onions"
+                    >
+
+                    <div class="card-body">
+
+                        <h5 class="fw-bold">
+                            Red Onions
+                        </h5>
+
+                        <p class="text-secondary">
+                            Ahmednagar
+                        </p>
+
+                        <a
+                            href="product.html?id=6"
+                            class="btn btn-outline-success"
+                        >
+                            View
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="py-4">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-6">
+
+                <h5 class="fw-bold">
+                    HARVESTLINK
+                </h5>
+
+                <p class="mb-0">
+                    Connecting farmers, buyers and communities.
+                </p>
+
+            </div>
+
+            <div class="col-md-6 text-md-end mt-3 mt-md-0">
+
+                <p class="mb-0">
+                    © 2026 HarvestLink
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

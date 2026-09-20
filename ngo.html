@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NGOs & Communities | HarvestLink</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: #f7f6f0;
+            color: #173b27;
+        }
+
+        h1, h2, h3, h4, .navbar-brand {
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .navbar {
+            background: #173b27;
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .navbar .nav-link {
+            color: white;
+            margin-left: 12px;
+        }
+
+        .navbar .nav-link:hover,
+        .navbar .nav-link.active {
+            color: #a8cf63;
+        }
+
+        /* HERO */
+
+        .ngo-hero {
+            min-height: 500px;
+            background:
+                linear-gradient(
+                    rgba(23, 59, 39, 0.68),
+                    rgba(23, 59, 39, 0.68)
+                ),
+                url("https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 760px;
+        }
+
+        .hero-label {
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+        }
+
+        .ngo-hero h1 {
+            font-size: clamp(2.8rem, 6vw, 5rem);
+            font-weight: 800;
+            line-height: 0.98;
+        }
+
+        .ngo-hero p {
+            max-width: 650px;
+            font-size: 1.1rem;
+            color: #edf2eb;
+        }
+
+        .btn-main {
+            background: #8bc34a;
+            border: 1px solid #8bc34a;
+            color: #173b27;
+            border-radius: 0;
+            padding: 11px 23px;
+            font-weight: 700;
+        }
+
+        .btn-main:hover {
+            background: #a8cf63;
+            color: #173b27;
+        }
+
+        /* INTRO */
+
+        .intro-section {
+            background: white;
+            padding: 70px 0;
+        }
+
+        .section-label {
+            color: #527d28;
+            font-size: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            font-weight: 800;
+        }
+
+        /* ACTION CARDS */
+
+        .action-card {
+            background: #f7f6f0;
+            border: 1px solid #dce5d8;
+            padding: 28px;
+            height: 100%;
+        }
+
+        .action-card h4 {
+            font-weight: 700;
+        }
+
+        .action-symbol {
+            font-family: "Montserrat", sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #527d28;
+        }
+
+        /* NEEDS */
+
+        .needs-section {
+            padding: 75px 0;
+        }
+
+        .needs-main {
+            background: #173b27;
+            color: white;
+            padding: 35px;
+            height: 100%;
+        }
+
+        .needs-main p {
+            color: #dce5d8;
+        }
+
+        .need-item {
+            background: white;
+            border: 1px solid #dce5d8;
+            padding: 23px;
+            height: 100%;
+        }
+
+        .need-item h5 {
+            font-weight: 700;
+        }
+
+        .need-tag {
+            display: inline-block;
+            background: #dfeccf;
+            color: #527d28;
+            padding: 5px 10px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        /* FEATURE */
+
+        .feature-section {
+            background: #dfeccf;
+            padding: 65px 0;
+        }
+
+        .feature-box {
+            background: white;
+            padding: 30px;
+            height: 100%;
+        }
+
+        .feature-box h3 {
+            font-weight: 800;
+        }
+
+        /* CTA */
+
+        .cta-section {
+            background: #173b27;
+            color: white;
+            padding: 65px 0;
+        }
+
+        .cta-section h2 {
+            font-weight: 800;
+        }
+
+        footer {
+            background: #102a1c;
+            color: #dce5d8;
+        }
+
+        footer a {
+            color: #dce5d8;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #a8cf63;
+        }
+
+        @media (max-width: 768px) {
+
+            .ngo-hero {
+                min-height: 430px;
+            }
+
+            .ngo-hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="index.html">
+            HL | HARVESTLINK
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="listings.html">
+                        Marketplace
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="impact.html">
+                        Our Impact
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="ngo.html">
+                        NGOs
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="seller.html">
+                        For Farmers
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">
+                        Login
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="ngo-hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="hero-label mb-3">
+                FOR NGOs & COMMUNITY ORGANISATIONS
+            </div>
+
+            <h1>
+                CONNECTING FOOD WITH COMMUNITIES.
+            </h1>
+
+            <p class="mt-4">
+                Discover available agricultural produce and build
+                connections between local farmers and community
+                organisations.
+            </p>
+
+            <div class="d-flex gap-3 mt-4 flex-wrap">
+
+                <a href="listings.html" class="btn btn-main">
+                    EXPLORE PRODUCE
+                </a>
+
+                <a href="signup.html"
+                   class="btn btn-light rounded-0 px-4">
+                    JOIN AS NGO
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="intro-section">
+
+    <div class="container">
+
+        <div class="row align-items-end mb-5">
+
+            <div class="col-lg-7">
+
+                <div class="section-label">
+                    HOW NGOs CAN USE HARVESTLINK
+                </div>
+
+                <h2 class="section-title display-6 mt-2">
+                    TURN AVAILABLE PRODUCE INTO COMMUNITY CONNECTIONS.
+                </h2>
+
+            </div>
+
+            <div class="col-lg-5">
+
+                <p class="text-muted mb-0">
+                    A simple platform to discover produce,
+                    connect locally and support community needs.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="row g-3">
+
+            <div class="col-md-4">
+
+                <div class="action-card">
+
+                    <div class="action-symbol">
+                        +
+                    </div>
+
+                    <h4 class="mt-4">
+                        Discover Produce
+                    </h4>
+
+                    <p class="text-muted mb-0">
+                        Browse fruits, vegetables, grains and
+                        other agricultural produce available
+                        through the marketplace.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="action-card">
+
+                    <div class="action-symbol">
+                        ↔
+                    </div>
+
+                    <h4 class="mt-4">
+                        Connect Locally
+                    </h4>
+
+                    <p class="text-muted mb-0">
+                        Find farmers and sellers based on
+                        location and available produce.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="action-card">
+
+                    <div class="action-symbol">
+                        →
+                    </div>
+
+                    <h4 class="mt-4">
+                        Support Communities
+                    </h4>
+
+                    <p class="text-muted mb-0">
+                        Help available resources reach
+                        community kitchens and initiatives.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- COMMUNITY NEEDS -->
+
+<section class="needs-section">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-lg-5">
+
+                <div class="needs-main">
+
+                    <div class="section-label"
+                         style="color:#a8cf63;">
+                        COMMUNITY NEEDS
+                    </div>
+
+                    <h2 class="fw-bold mt-3">
+                        WHAT DOES YOUR COMMUNITY NEED?
+                    </h2>
+
+                    <p class="mt-3">
+                        Explore different types of produce and
+                        resources that can support local
+                        community initiatives.
+                    </p>
+
+                    <a href="listings.html"
+                       class="btn btn-main mt-3">
+                        VIEW MARKETPLACE
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-7">
+
+                <div class="row g-3">
+
+                    <div class="col-md-6">
+
+                        <div class="need-item">
+
+                            <span class="need-tag">
+                                Available
+                            </span>
+
+                            <h5 class="mt-3">
+                                Fresh Vegetables
+                            </h5>
+
+                            <p class="text-muted small mb-0">
+                                Tomatoes, spinach, onions
+                                and seasonal produce.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-6">
+
+                        <div class="need-item">
+
+                            <span class="need-tag">
+                                Food Support
+                            </span>
+
+                            <h5 class="mt-3">
+                                Grains & Staples
+                            </h5>
+
+                            <p class="text-muted small mb-0">
+                                Wheat and other everyday
+                                food requirements.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-6">
+
+                        <div class="need-item">
+
+                            <span class="need-tag">
+                                Local
+                            </span>
+
+                            <h5 class="mt-3">
+                                Nearby Farmers
+                            </h5>
+
+                            <p class="text-muted small mb-0">
+                                Discover produce available
+                                from nearby sellers.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-6">
+
+                        <div class="need-item">
+
+                            <span class="need-tag">
+                                Community
+                            </span>
+
+                            <h5 class="mt-3">
+                                Community Kitchens
+                            </h5>
+
+                            <p class="text-muted small mb-0">
+                                Connect available resources
+                                with local initiatives.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FEATURED -->
+
+<section class="feature-section">
+
+    <div class="container">
+
+        <div class="row g-3">
+
+            <div class="col-lg-4">
+
+                <div class="feature-box">
+
+                    <div class="section-label">
+                        EXAMPLE
+                    </div>
+
+                    <h3 class="mt-3">
+                        ONE LISTING CAN START A CONNECTION.
+                    </h3>
+
+                    <p class="text-muted mt-3 mb-0">
+                        A farmer lists fresh produce.
+                        An organisation discovers it.
+                        A local connection begins.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-8">
+
+                <div class="feature-box">
+
+                    <div class="row align-items-center">
+
+                        <div class="col-md-7">
+
+                            <span class="need-tag">
+                                AVAILABLE PRODUCE
+                            </span>
+
+                            <h3 class="mt-3">
+                                Fresh Tomatoes
+                            </h3>
+
+                            <p class="text-muted">
+                                Freshly harvested produce available
+                                from a local farmer.
+                            </p>
+
+                        </div>
+
+                        <div class="col-md-5">
+
+                            <div class="border p-3">
+
+                                <div class="small text-muted">
+                                    QUANTITY
+                                </div>
+
+                                <div class="fw-bold fs-5">
+                                    50 KG
+                                </div>
+
+                                <div class="small text-muted mt-2">
+                                    LOCATION
+                                </div>
+
+                                <div class="fw-bold">
+                                    SATARA
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta-section">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-8">
+
+                <div class="section-label"
+                     style="color:#a8cf63;">
+                    GET INVOLVED
+                </div>
+
+                <h2 class="display-6 mt-2">
+                    HELP BUILD STRONGER LOCAL FOOD CONNECTIONS.
+                </h2>
+
+            </div>
+
+            <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+
+                <a href="signup.html"
+                   class="btn btn-main">
+                    JOIN HARVESTLINK
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer class="py-4">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-6">
+
+                <strong>HL | HARVESTLINK</strong>
+
+                <p class="small mb-0 mt-2">
+                    Connecting farmers, buyers and communities.
+                </p>
+
+            </div>
+
+            <div class="col-md-6 text-md-end mt-3 mt-md-0">
+
+                <a href="index.html" class="me-3">
+                    Home
+                </a>
+
+                <a href="listings.html" class="me-3">
+                    Marketplace
+                </a>
+
+                <a href="impact.html">
+                    Impact
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="app.js"></script>
+
+</body>
+</html>
